@@ -1,7 +1,9 @@
+// projects page
+
 export default function Projects() {
     return (
-        <div>
-            projects page
-        </div>
+        <section className="flex flex-col items-center h-screen">
+            <h1 className="text-[100px]">PROJECTS</h1>
+        </section>
     );
 }
