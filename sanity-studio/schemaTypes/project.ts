@@ -1,3 +1,6 @@
+// sanity schema
+// defines how the data is structured and stored in the sanity cms
+
 export default {
     name: 'project',
     title: 'Project',

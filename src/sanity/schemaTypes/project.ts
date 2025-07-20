@@ -1,3 +1,7 @@
+// frontend type definition
+// describes the shape of the data when it's fetched from sanity and used in the
+// web app
+
 export type SanityImage = {
   _type: "image";
   asset: {
@@ -18,6 +22,11 @@ export type SanityImage = {
   };
 };
 
+export type Slug = {
+    _type: "slug";
+    current: string;
+};
+
 export type BlockContent = unknown;
 
 export type Project = {
@@ -25,11 +34,11 @@ export type Project = {
   _createdAt?: string;
   thumbnail?: SanityImage;
   title: string;
-  slug: { current: string };
+  slug: Slug;
   description?: string;
   date?: string;
   role?: string;
-  programs?: string[];
+  programs?: SanityImage[];
   skills?: string[];
   overview?: BlockContent;
   problem?: BlockContent;
