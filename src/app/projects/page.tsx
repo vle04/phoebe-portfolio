@@ -2,6 +2,7 @@
 
 import { client } from "@/sanity/lib/client";
 import ProjectCard from "@/components/ProjectCard";
+import { Project } from "@/sanity/schemaTypes/project";
 
 // fetch project data
 const query = `*[_type == "project"] | order(date desc) {
@@ -25,7 +26,7 @@ export default async function Projects() {
     return (
         <section className="flex flex-col items-center h-screen">
             <h1 className="text-[100px]">PROJECTS</h1>
-            {projects.map((project: any) => (
+            {projects.map((project: Project) => (
                 <ProjectCard key={project._id} project={project}/>
             ))}
         </section>

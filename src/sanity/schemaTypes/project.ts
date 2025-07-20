@@ -18,7 +18,7 @@ export type SanityImage = {
   };
 };
 
-export type BlockContent = any;
+export type BlockContent = unknown;
 
 export type Project = {
   _id?: string;
