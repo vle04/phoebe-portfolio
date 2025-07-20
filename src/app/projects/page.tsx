@@ -21,7 +21,7 @@ const query = `*[_type == "project"] | order(date desc) {
 
 export default async function Projects() {
     const projects = await client.fetch(query);
-    console.log(projects);
+    // console.log(projects);
 
     return (
         <section className="flex flex-col items-center h-screen">
