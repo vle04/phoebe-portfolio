@@ -2,10 +2,6 @@
 
 import Link from "next/link";
 
-// potentional params:
-// number of skills
-// image path
-
 export default function NavBar() {
   return (
     <nav className="flex flex-row bg-neutral-300 items-center w-fit h-fit mb-2 px-8 rounded-full">
