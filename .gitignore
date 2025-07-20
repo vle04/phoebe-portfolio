@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# ignore node_modules and build artifacts
+sanity-studio/node_modules/
+sanity-studio/.sanity-plugin/
