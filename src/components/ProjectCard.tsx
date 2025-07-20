@@ -1,8 +1,8 @@
 // individual project cards for the projects page
 
 import Image from "next/image";
-import raccoon from "../public/images/raccoon.png";
-import SkillTab from "./SkillTab";
+// import raccoon from "../public/images/raccoon.png";
+// import SkillTab from "./SkillTab";
 import { urlFor } from "@/sanity/lib/image";
 
 // project card props
