@@ -26,5 +26,3 @@ export default {
         }
     ]
 }
-
-// note: make date into start and end date

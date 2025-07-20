@@ -4,16 +4,17 @@ import Image from "next/image";
 // import raccoon from "../public/images/raccoon.png";
 // import SkillTab from "./SkillTab";
 import { urlFor } from "@/sanity/lib/image";
+import type { Project } from "@/sanity/schemaTypes/project";
 
 // project card props
-type Project = {
-  title: string;
-  description: string;
-  date?: string;
-  programs?: string[];
-  skills?: string[];
-  thumbnail?: any; // sanity image object
-};
+// type Project = {
+//   title: string;
+//   description: string;
+//   date?: string;
+//   programs?: string[];
+//   skills?: string[];
+//   thumbnail?: SanityImage; // sanity image object
+// };
 
 export default function ProjectCard({ project }: { project: Project }) {
   const imageUrl = project.thumbnail ? urlFor(project.thumbnail).width(200).height(200).url() : null;
