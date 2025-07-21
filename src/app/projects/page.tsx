@@ -20,15 +20,18 @@ const query = `*[_type == "project"] | order(date desc) {
 // use await to wait for data before rendering, enclosing func has to be async
 
 export default async function Projects() {
-    const projects = await client.fetch(query);
-    // console.log(projects);
+  const projects = await client.fetch(query);
+  // console.log(projects);
 
-    return (
-        <section className="flex flex-col items-center h-screen">
-            <h1 className="text-[100px]">PROJECTS</h1>
-            {projects.map((project: Project) => (
-                <ProjectCard key={project._id} project={project}/>
-            ))}
-        </section>
-    );
+  return (
+    <section className="flex flex-col items-center h-screen">
+      <h1 className="text-[100px]">PROJECTS</h1>
+      {/* projects wrapper */}
+      <div className="flex flex-col gap-8">
+        {projects.map((project: Project) => (
+          <ProjectCard key={project._id} project={project} />
+        ))}
+      </div>
+    </section>
+  );
 }
