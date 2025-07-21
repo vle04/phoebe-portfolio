@@ -10,6 +10,8 @@ export default function ProjectCard({ project }: { project: Project }) {
     ? urlFor(project.thumbnail).width(200).height(200).url()
     : null;
 
+    console.log(project.programs);
+
   return (
     <div className="flex flex-row gap-8 h-fit">
       {/* left container */}
@@ -43,11 +45,13 @@ export default function ProjectCard({ project }: { project: Project }) {
 
           {/* description container */}
           <div className="leading-relaxed min-h-[5rem]">
-            <p className="whitespace-normal break-words">{project.description}</p>
+            <p className="whitespace-normal break-words">
+              {project.description}
+            </p>
           </div>
 
           <p>{project.date}</p>
-          <p>Programs: your mom</p>
+          <p>Programs: {project.programs?.join(", ")}</p>
         </div>
       </div>
     </div>

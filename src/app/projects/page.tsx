@@ -13,7 +13,8 @@ const query = `*[_type == "project"] | order(date desc) {
     description,
     "image": coverImage,
     date,
-    skills
+    skills,
+    programs,
 }`;
 
 // fetch is async (returns promise that resolves to proj data from sanity )

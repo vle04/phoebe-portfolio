@@ -38,7 +38,7 @@ export type Project = {
   description?: string;
   date?: string;
   role?: string;
-  programs?: SanityImage[];
+  programs?: string[];
   skills?: string[];
   overview?: BlockContent;
   problem?: BlockContent;
