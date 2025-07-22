@@ -25,13 +25,19 @@ export default async function Projects() {
   // console.log(projects);
 
   return (
-    <section className="flex flex-col items-center h-screen">
+    <section className="flex flex-col items-center h-screen w-screen">
       <h1 className="text-[100px]">PROJECTS</h1>
-      {/* projects wrapper */}
-      <div className="flex flex-col gap-8">
-        {projects.map((project: Project) => (
-          <ProjectCard key={project._id} project={project} />
-        ))}
+
+      {/* menu container */}
+      <div className="bg-blue-100 w-full">menu container lolz</div>
+
+      <div className="w-full bg-red-100">
+        {/* projects container */}
+        <div className="flex flex-row gap-[30px]">
+          {projects.map((project: Project) => (
+            <ProjectCard key={project._id} project={project} />
+          ))}
+        </div>
       </div>
     </section>
   );
