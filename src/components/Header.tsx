@@ -1,14 +1,14 @@
-// navigation bar at the top of every page (except home)
+// header at the top of every page (except home)
 
 import Image from "next/image";
-import raccoon from "@/public/images/raccoon-gesture.png";
+import Raccoon from "@/public/images/raccoon-gesture.png";
 
 export default function NavBar() {
   return (
     <section className="relative flex w-screen mb-20 justify-end items-center">
       <h1 className="text-[103px] font-light px-[160px] relative">phoebe yao</h1>
       <Image
-        src={raccoon}
+        src={Raccoon}
         alt="raccoon gesturing at the title phoebe yao"
         width={100}
         height={100}

@@ -13,7 +13,7 @@ export default function ProjectCard({ project }: { project: Project }) {
   console.log(project.programs);
 
   return (
-    <div className="flex flex-col h-fit min-w-[330px]">
+    <div className="flex flex-col h-fit max-w-[330px]">
       {/* skills wrapper */}
       <div className="flex flex-col items-center">
         <div className="flex flex-row gap-4">

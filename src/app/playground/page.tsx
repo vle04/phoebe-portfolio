@@ -1,7 +1,7 @@
 export default function Photos() {
     return (
         <div>
-            photos page
+            playground page
         </div>
     );
 }
