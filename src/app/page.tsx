@@ -1,4 +1,5 @@
 // home page
+"use client";
 
 import HomeMenu from "@/components/HomeMenu"
 

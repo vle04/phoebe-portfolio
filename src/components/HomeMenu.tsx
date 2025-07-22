@@ -1,28 +1,35 @@
 // navigation menu on the home page
+"use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function HomeMenu() {
+  const pathname = usePathname();
+  const links = [
+    { href: "/", label: "home" },
+    { href: "/projects", label: "projects" },
+    { href: "/fine-art", label: "fine art" },
+    { href: "/playground", label: "playground!" },
+  ];
+
   return (
     <nav className="flex flex-col min-w-[100px] h-fit px-3 py-2">
       <h1 className="font-bold">menu</h1>
       <hr className="my-2 w-full"></hr>
       <div className="flex flex-col">
-        <Link href={"/"} className="hover:text-indigo-400">
-          <h2>home</h2>
-        </Link>
-
-        <Link href={"/projects"} className="hover:text-indigo-400">
-          <h2>projects</h2>
-        </Link>
-
-        <Link href={"/fine-art"} className="hover:text-indigo-400">
-          <h2>fine art</h2>
-        </Link>
-
-        <Link href={"/playground"} className="hover:text-indigo-400">
-          <h2>playground!</h2>
-        </Link>
+        {links.map((link) => {
+          const isActive = pathname === link.href;
+          return (
+            <Link
+              key={link.href}
+              href={link.href}
+              className={`hover:text-indigo-400 ${isActive ? "text-indigo-400" : "text-black"}`}
+            >
+              <h2>{link.label}</h2>
+            </Link>
+          );
+        })}
       </div>
     </nav>
   );
