@@ -27,8 +27,6 @@ export default async function Projects() {
 
   return (
     <section className="flex flex-col items-center h-screen w-screen">
-      <h1 className="text-[100px]">PROJECTS</h1>
-
       <div className="flex flex-row gap-[52px]">
         {/* menu container */}
         <div className="bg-neutral-300 w-full">

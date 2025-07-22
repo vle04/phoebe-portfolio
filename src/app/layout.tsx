@@ -14,7 +14,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-white flex flex-col items-center mt-8">
+      <body className="bg-white flex flex-col items-center">
         <LayoutNav>{children}</LayoutNav>
       </body>
     </html>
