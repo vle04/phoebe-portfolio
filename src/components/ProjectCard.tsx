@@ -13,10 +13,10 @@ export default function ProjectCard({ project }: { project: Project }) {
   console.log(project.programs);
 
   return (
-    <div className="flex flex-col h-fit max-w-[300px]">
+    <div className="flex flex-col h-fit min-w-[330px]">
       {/* skills wrapper */}
       <div className="flex flex-col items-center">
-        <div className="flex flex-row gap-4 min-w-[90px]">
+        <div className="flex flex-row gap-4">
           {project.skills?.map((skill, i) => (
             <SkillTab key={i} label={skill} />
           ))}
@@ -29,8 +29,8 @@ export default function ProjectCard({ project }: { project: Project }) {
           <Image
             src={imageUrl}
             alt={project.title}
-            width={300}
-            height={300}
+            width={330}
+            height={330}
             className="rounded-4xl mt-[12px] mb-[23px]"
           />
         ) : (

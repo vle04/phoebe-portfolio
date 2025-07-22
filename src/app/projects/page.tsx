@@ -3,6 +3,7 @@
 import { client } from "@/sanity/lib/client";
 import ProjectCard from "@/components/ProjectCard";
 import { Project } from "@/sanity/schemaTypes/project";
+import HomeMenu from "@/components/HomeMenu";
 
 // fetch project data
 const query = `*[_type == "project"] | order(date desc) {
@@ -28,15 +29,20 @@ export default async function Projects() {
     <section className="flex flex-col items-center h-screen w-screen">
       <h1 className="text-[100px]">PROJECTS</h1>
 
-      {/* menu container */}
-      <div className="bg-blue-100 w-full">menu container lolz</div>
+      <div className="flex flex-row gap-[52px]">
+        {/* menu container */}
+        <div className="bg-neutral-300 w-full">
+          <HomeMenu />
+          menu container lolz 
+        </div>
 
-      <div className="w-full bg-red-100">
-        {/* projects container */}
-        <div className="flex flex-row gap-[30px]">
-          {projects.map((project: Project) => (
-            <ProjectCard key={project._id} project={project} />
-          ))}
+        <div className="w-full">
+          {/* projects container */}
+          <div className="flex flex-row gap-[30px]">
+            {projects.map((project: Project) => (
+              <ProjectCard key={project._id} project={project} />
+            ))}
+          </div>
         </div>
       </div>
     </section>
