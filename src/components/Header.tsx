@@ -5,7 +5,7 @@ import Raccoon from "@/public/images/raccoon-gesture.png";
 
 export default function NavBar() {
   return (
-    <section className="relative flex w-screen mb-20 justify-end items-center">
+    <header className="relative flex w-screen mb-20 justify-end items-center">
       <h1 className="text-[103px] font-light px-[160px] relative">phoebe yao</h1>
       <Image
         src={Raccoon}
@@ -14,6 +14,6 @@ export default function NavBar() {
         height={100}
         className="absolute -bottom-12 right-15"
       />
-    </section>
+    </header>
   );
 }

@@ -10,10 +10,8 @@ export default function ProjectCard({ project }: { project: Project }) {
     ? urlFor(project.thumbnail).width(200).height(200).url()
     : null;
 
-  console.log(project.programs);
-
   return (
-    <div className="flex flex-col h-fit max-w-[330px]">
+    <div className="flex flex-col h-fit max-w-[330px] hover:bg-violet-100">
       {/* skills wrapper */}
       <div className="flex flex-col items-center">
         <div className="flex flex-row gap-4">

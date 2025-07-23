@@ -20,15 +20,14 @@ const query = `*[_type == "project"] | order(date desc) {
     programs,
 }`;
 
-// fetch is async (returns promise that resolves to proj data from sanity )
+// fetch is async (returns promise that resolves to proj data from sanity)
 // use await to wait for data before rendering, enclosing func has to be async
 
 export default async function Projects() {
   const projects = await client.fetch(query);
-  // console.log(projects);
 
   return (
-    <section className="flex flex-col items-center h-screen w-screen">
+    <section className="flex flex-col items-center h-fit w-screen mb-20">
       <div className="flex flex-row gap-[52px]">
         
         {/* sidebar container */}
