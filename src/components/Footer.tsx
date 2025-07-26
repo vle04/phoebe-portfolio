@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import RaccoonPhone from "@/public/images/raccoon-phone.png";
 import Trio from "@/public/images/trio.png";
+import { Mail } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -25,9 +26,11 @@ export default function Footer() {
       </div>
 
       {/* the rest of the footer */}
-      <div className="flex flex-row justify-between bg-neutral-300 w-full items-center px-[40px] h-[8rem]">
+      <div className="flex flex-row justify-between bg-neutral-300 w-full items-center px-[40px] h-[6.5rem]">
         {/* links container */}
-        <div>link</div>
+        <div>
+          <Mail/>
+        </div>
 
         {/* credits container */}
         <div className="h-full pt-[13px] text-right">
@@ -35,7 +38,7 @@ export default function Footer() {
           <p>
             developed w 🍵 by{" "}
             <Link href={"https://github.com/vle04"} className="underline">
-              vina le
+              <strong>vina le</strong>
             </Link>
           </p>
         </div>
