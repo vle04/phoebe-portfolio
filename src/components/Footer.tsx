@@ -4,13 +4,13 @@ import Image from "next/image";
 import Link from "next/link";
 import RaccoonPhone from "@/public/images/raccoon-phone.png";
 import Trio from "@/public/images/trio.png";
-import { Mail, Linkedin } from "lucide-react";
+import { Icon } from "@iconify/react";
 
 export default function Footer() {
   return (
     <div className="flex flex-col w-screen items-center">
       {/* images container */}
-      <div className="flex flex-row w-full items-center justify-between">
+      <div className="flex flex-row w-full items-center justify-between pl-[50px]">
         <Image
             src={RaccoonPhone}
             alt="raccoon holding a phone"
@@ -28,8 +28,10 @@ export default function Footer() {
       {/* the rest of the footer */}
       <div className="flex flex-row justify-between bg-neutral-300 w-full items-center px-[40px] h-[6rem]">
         {/* links container */}
-        <div>
-          <Mail className="w-[35px] h-[35px]"/>
+        <div className="flex flex-row items-center gap-2">
+          <Icon icon="material-symbols:mail" width={40} height={40}/>
+          <Icon icon="mdi:linkedin" width={40} height={40}/>
+          <Icon icon="mdi:instagram" width={40} height={40}/>
         </div>
 
         {/* credits container */}
