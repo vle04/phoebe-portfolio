@@ -4,10 +4,6 @@ import { client } from "@/sanity/lib/client";
 // make dynamic routes for each project page
 // page's url will depend on the project's slug
 
-type ProjectPageProps = {
-  params: { slug: string };
-};
-
 // fetch project data based on the slug
 const query = `*[_type == "project" && slug.current == $slug][0]{
         title,
@@ -22,7 +18,7 @@ const query = `*[_type == "project" && slug.current == $slug][0]{
         thumbnail
     }`;
 
-export default async function ProjectPage({ params }: ProjectPageProps) {
+export default async function ProjectPage({ params }: { params: { slug: string };}) {
   // params.slug comes from the url
   const { slug } = await params;
   const project = await client.fetch(query, { slug });
