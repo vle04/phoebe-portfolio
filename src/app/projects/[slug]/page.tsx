@@ -1,5 +1,5 @@
 import { client } from "@/sanity/lib/client";
-import { PortableText } from "next-sanity";
+import { PortableText } from "@portabletext/react";
 // import { urlFor } from "@/sanity/lib/image";
 
 // make dynamic routes for each project page
@@ -20,9 +20,9 @@ const query = `*[_type == "project" && slug.current == $slug][0]{
     }`;
 
 export default async function ProjectPage({
-  params,
+  params
 }: {
-  params: { slug: string };
+  params: { slug: string }
 }) {
   // params.slug comes from the url
   const { slug } = await params;
@@ -46,19 +46,19 @@ export default async function ProjectPage({
         <p>program icons will go here</p>
       </div>
 
-          <div>
-            <h2>overview</h2>
-            <div className="px-10 prose">
-              <PortableText value={project.overview} />
-            </div>
-          </div>
+      <div>
+        <h2>overview</h2>
+        <div className="px-10 prose">
+          <PortableText value={project.overview} />
+        </div>
+      </div>
 
-          <div>
-            <h2>problem</h2>
-            <div className="px-10 prose">
-              <PortableText value={project.problem} />
-            </div>
-          </div>
+      <div>
+        <h2>problem</h2>
+        <div className="px-10 prose">
+          <PortableText value={project.problem} />
+        </div>
+      </div>
 
       {/* image gallery */}
       {/* TODO: make component for gallery */}
