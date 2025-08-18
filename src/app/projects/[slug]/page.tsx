@@ -1,5 +1,3 @@
-export const dynamic = "force-dynamic";
-
 import { client } from "@/sanity/lib/client";
 import { PortableText } from "@portabletext/react";
 // import { urlFor } from "@/sanity/lib/image";
