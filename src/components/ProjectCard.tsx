@@ -13,7 +13,7 @@ export default function ProjectCard({ project }: { project: Project }) {
 
   return (
     <Link href={`/projects/${project.slug}`}>
-      <div className="flex flex-col h-fit max-w-[330px] hover:bg-violet-100">
+      <div className="flex flex-col h-fit w-[330px] hover:bg-violet-100 p-4">
         {/* skills wrapper */}
         <div className="flex flex-col items-center">
           <div className="flex flex-row gap-4">

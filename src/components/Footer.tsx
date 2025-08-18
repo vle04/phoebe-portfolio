@@ -8,7 +8,7 @@ import { Icon } from "@iconify/react";
 
 export default function Footer() {
   return (
-    <div className="flex flex-col w-screen items-center">
+    <div className="flex flex-col w-screen items-center mt-20">
       {/* images container */}
       <div className="flex flex-row w-full items-center justify-between pl-[50px]">
         <Image
