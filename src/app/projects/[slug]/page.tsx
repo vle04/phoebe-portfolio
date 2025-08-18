@@ -24,7 +24,7 @@ const query = `*[_type == "project" && slug.current == $slug][0]{
 export default async function ProjectPage({
   params
 }: {
-  params: { slug: string }
+  params: { params: any }
 }) {
   // params.slug comes from the url
   const { slug } = await params;
