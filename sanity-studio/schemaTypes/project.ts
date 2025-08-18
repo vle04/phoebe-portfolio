@@ -9,7 +9,7 @@ export default {
         { 
             name: 'thumbnail', 
             type: 'image',
-            title: 'cover image',
+            title: 'thumbnail',
             options: { hotspot: true }
         },
         { name: 'title', type: 'string' },

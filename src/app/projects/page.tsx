@@ -14,7 +14,6 @@ const query = `*[_type == "project"] | order(date desc) {
     title,
     "slug": slug.current,
     description,
-    "image": coverImage,
     date,
     skills,
     programs,
@@ -38,9 +37,9 @@ export default async function Projects() {
             width={230}
             height={150}
           />
-          <div className="w-full p-3 bg-neutral-300">
+          {/* <div className="bg-neutral-300">
             <HomeMenu />
-          </div>
+          </div> */}
         </div>
 
         {/* projects container */}
