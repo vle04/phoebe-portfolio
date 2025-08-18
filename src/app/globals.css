@@ -8,6 +8,10 @@
   font-display: swap;
 }
 
-/* h1 {
+h1 {
   font-family: "PhoebeFont", sans-serif;
-} */
+}
+
+h2 {
+  font-size: 3rem;
+}

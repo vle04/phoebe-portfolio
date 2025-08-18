@@ -15,7 +15,7 @@ export default function HomeMenu() {
 
   return (
     <nav className="flex flex-col min-w-[200px] h-fit px-6 py-4 bg-neutral-300 text-[20px]">
-      <h1 className="font-bold">menu</h1>
+      <p className="font-bold">menu</p>
       <hr className="my-2 w-full"></hr>
       <div className="flex flex-col">
         {links.map((link) => {
@@ -26,7 +26,7 @@ export default function HomeMenu() {
               href={link.href}
               className={`hover:text-indigo-400 ${isActive ? "text-indigo-400" : "text-black"}`}
             >
-              <h2>{link.label}</h2>
+              <p>{link.label}</p>
             </Link>
           );
         })}

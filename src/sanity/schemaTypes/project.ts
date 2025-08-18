@@ -1,6 +1,7 @@
 // frontend type definition
 // describes the shape of the data when it's fetched from sanity and used in the
 // web app
+import { PortableTextBlock } from "next-sanity";
 
 export type SanityImage = {
   _type: "image";
@@ -27,7 +28,7 @@ export type Slug = {
     current: string;
 };
 
-export type BlockContent = unknown;
+export type BlockContent = PortableTextBlock[]; // sanity rich text;
 
 export type Project = {
   _id?: string;
@@ -40,7 +41,7 @@ export type Project = {
   role?: string;
   programs?: string[];
   skills?: string[];
-  overview?: BlockContent;
-  problem?: BlockContent;
+  overview?: BlockContent
+  problem?: BlockContent
   images?: SanityImage[];
 };
