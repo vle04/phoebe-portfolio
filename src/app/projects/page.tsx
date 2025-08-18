@@ -26,15 +26,13 @@ export default async function Projects() {
   const projects = await client.fetch(query);
 
   return (
-    <section className="flex flex-col items-center h-fit bg-red-100">
+    <section className="flex flex-col h-fit">
         {/* projects container */}
-        {/* <div className="w-fit"> */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 justify-items-center">
             {projects.map((project: Project) => (
               <ProjectCard key={project._id} project={project} />
             ))}
           </div>
-        {/* </div> */}
     </section>
   );
 }
