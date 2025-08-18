@@ -21,13 +21,11 @@ const query = `*[_type == "project" && slug.current == $slug][0]{
         thumbnail
     }`;
 
-type ProjectPageProps = {
-  params: {
-    slug: string;
-  };
+type Params = {
+  slug: string;
 };
 
-export default async function ProjectPage({ params }: ProjectPageProps) {
+export default async function ProjectPage({ params }: { params: Params }) {
   // params.slug comes from the url
   const { slug } = await params;
   const project = await client.fetch(query, { slug });
