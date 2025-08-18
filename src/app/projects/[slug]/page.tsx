@@ -70,3 +70,11 @@ export default async function ProjectPage({ params }: { params: Params }) {
     </section>
   );
 }
+
+// generate static params for ssg, ensures slugs are known at build time
+export async function generateStaticParams() {
+  const projects: { slug: { current: string } }[] = await client.fetch(
+    `*[_type=="project"]{slug}`
+  );
+  return projects.map((project) => ({ slug: project.slug.current }));
+}
