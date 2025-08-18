@@ -2,8 +2,8 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import RaccoonPhone from "@/public/images/raccoon-phone.png";
-import Trio from "@/public/images/trio.png";
+import RaccoonPhone from "../../public/images/raccoon-phone.png";
+import Trio from "../../public/images/trio.png";
 import { Icon } from "@iconify/react";
 
 export default function Footer() {

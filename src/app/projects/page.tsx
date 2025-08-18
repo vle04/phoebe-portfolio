@@ -5,7 +5,7 @@ import ProjectCard from "@/components/ProjectCard";
 import { Project } from "@/sanity/schemaTypes/project";
 import HomeMenu from "@/components/HomeMenu";
 import Image from "next/image";
-import RaccoonTiger from "@/public/images/raccoon-tiger.png";
+import RaccoonTiger from "../../../public/images/raccoon-tiger.png";
 
 // fetch project data
 const query = `*[_type == "project"] | order(date desc) {
