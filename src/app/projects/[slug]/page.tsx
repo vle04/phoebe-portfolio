@@ -1,6 +1,6 @@
 import { client } from "@/sanity/lib/client";
 import { PortableText } from "@portabletext/react";
-import type { Project } from "@/sanity/schemaTypes/project";
+// import type { Project } from "@/sanity/schemaTypes/project";
 
 // make dynamic routes for each project page
 // page's url will depend on the project's slug
