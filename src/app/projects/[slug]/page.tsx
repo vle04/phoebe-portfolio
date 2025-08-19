@@ -1,7 +1,6 @@
 import { client } from "@/sanity/lib/client";
 import { PortableText } from "@portabletext/react";
-import type PageProps from "next/app"; // optional if needed
-// import { urlFor } from "@/sanity/lib/image";
+import type { Project } from "@/sanity/schemaTypes/project";
 
 // make dynamic routes for each project page
 // page's url will depend on the project's slug
@@ -20,9 +19,10 @@ const query = `*[_type == "project" && slug.current == $slug][0]{
         thumbnail
     }`;
 
-// type Params = {
-//   slug: string;
-// };
+// define page props type 
+interface PageProps {
+  params: Promise<{ slug: string }>;
+}
 
 export default async function ProjectPage({ params }: PageProps) {
   // params.slug comes from the url
@@ -71,7 +71,7 @@ export default async function ProjectPage({ params }: PageProps) {
 }
 
 // generate static params for ssg, ensures slugs are known at build time
-export async function generateStaticParams() {
+export async function generateStaticParams(): Promise<{ slug: string }[]> {
   const projects: { slug: { current: string } }[] = await client.fetch(
     `*[_type=="project"]{slug}`
   );
