@@ -1,7 +1,6 @@
 // client wrapper with conditional logic, keeps layout.tsx server side
 "use client"; // needed to use pathname
 
-// import Header from "./Header";
 import { usePathname } from "next/navigation";
 import HomeMenu from "./HomeMenu";
 
@@ -16,8 +15,9 @@ export default function LayoutWrapper({
   if (isHome) {
     return (
       <main className="w-full">
-        <div className="flex items-center justify-center">
+        <div className="flex flex-col items-center justify-center">
           <HomeMenu />
+          {children}
         </div>
       </main>
     );

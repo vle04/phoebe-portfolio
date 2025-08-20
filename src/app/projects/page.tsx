@@ -26,9 +26,9 @@ export default async function Projects() {
   const projects = await client.fetch(query);
 
   return (
-    <section className="flex flex-col h-fit">
+    <section className="flex flex-col">
         {/* projects container */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 justify-items-center">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {projects.map((project: Project) => (
               <ProjectCard key={project._id} project={project} />
             ))}

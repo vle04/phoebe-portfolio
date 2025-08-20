@@ -16,9 +16,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-white flex flex-col items-center">
+      <body className="bg-white flex flex-col items-center justify-center overflow-y-scroll overflow-x-hidden">
         <Header />
-        <LayoutWrapper>{ children }</LayoutWrapper>
+        <LayoutWrapper>{children}</LayoutWrapper>
         <Footer />
       </body>
     </html>
