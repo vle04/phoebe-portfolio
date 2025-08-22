@@ -15,7 +15,7 @@ export default {
         { name: 'title', type: 'string' },
         { name: 'slug', type: 'slug', options: { source: 'title', maxLength: 96 } }, // url friendly string, helps with routing
         { name: 'description', type: 'text' },
-        { name: 'date', type: 'date' },
+        { name: 'date', type: 'text' },
         { name: 'role', type: 'string' },
         { name: 'programs', type: 'array', of: [{ type: 'string' }]},
         { name: 'skills', type: 'array', of: [{ type: 'string' }] },
